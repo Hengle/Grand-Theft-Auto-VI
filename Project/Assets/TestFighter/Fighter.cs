@@ -16,7 +16,16 @@ public class Fighter : NetworkBehaviour
         if (!hasAuthority) return;
         
         if (!Input.GetKeyDown(KeyCode.Space)) return;
-        
-        transform.Translate(movement);
+        CmdMove();
+       // transform.Translate(movement);
     }
+
+    [Command]
+    private void CmdMove()
+    {
+        RpcMove();
+    }
+
+    [ClientRpc]
+    private void RpcMove() => transform.Translate(movement);
 }

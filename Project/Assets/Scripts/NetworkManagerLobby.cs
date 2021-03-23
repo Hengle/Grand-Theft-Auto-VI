@@ -32,13 +32,13 @@ public class NetworkManagerLobby : NetworkManager
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
-        OnClientConnected.Invoke();
+        OnClientConnected?.Invoke();
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
     {
         base.OnClientDisconnect(conn);
-        OnClientDisconnected.Invoke();
+        OnClientDisconnected?.Invoke();
     }
 
     public override void OnServerConnect(NetworkConnection conn)
@@ -49,16 +49,16 @@ public class NetworkManagerLobby : NetworkManager
             return;
         }
 
-        if (SceneManager.GetActiveScene().name != menuScene)
+        if (SceneManager.GetActiveScene().path != menuScene)
         {
             conn.Disconnect();
             return;
         }
     }
- 
+
     public override void OnServerAddPlayer(NetworkConnection conn)
     {
-        if (SceneManager.GetActiveScene().name == menuScene)
+        if (SceneManager.GetActiveScene().path == menuScene)
         {
             NetworkRoomPlayerLobby roomPlayerInstance = Instantiate(roomPlayerPrefab);
             NetworkServer.AddPlayerForConnection(conn, roomPlayerInstance.gameObject);

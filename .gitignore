@@ -63,11 +63,25 @@ Project/Packages/packages-lock.json
 Project/Assets/_TerrainAutoUpgrade.meta
 Project/Assets/_TerrainAutoUpgrade/
 
+Project/Assets/FightingAnimsetPro.meta
+Project/Assets/FightingAnimsetPro/
+
+Project/Assets/Ring.meta
+Project/Assets/Ring/
+
 Project/Assets/Free Island Collection.meta
 Project/Assets/Free Island Collection/
 
 Project/Assets/Mirror.meta
 Project/Assets/Mirror/
+
+# Standard Assets
+Project/Assets/SampleScenes.meta
+Project/Assets/SampleScenes/
+Project/Assets/Standard Assets.meta
+Project/Assets/Standard Assets/
+
+
 
 Project/Assets/ScriptTemplates.meta
 Project/Assets/ScriptTemplates/
